@@ -1,0 +1,47 @@
+index.html(html file)
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About me</title>
+</head>
+<body>
+	<h1>DOM - Document Object Module</h1>
+    
+    <button id = "change-background">click here to change the bg</button>
+
+    <button id = "change-background-dbl">Double click here to change the bg</button>
+
+    <button id = "change-background-moent">Mouseenter to change the bg to yellow</button>
+
+    <button id = "change-background-moout">Mouseout to change bg to orange
+
+    <script src = "main.js"></script>
+</body>
+</html>
+
+
+main.js  (javascript file)
+
+var button = document.getElementById('change-background');
+button.addEventListener('click',function() {
+
+document.body.style.backgroundColor = 'tomato';
+});
+
+var button = document.getElementById('change-background-dbl');
+button.addEventListener('dblclick',function(){
+
+document.body.style.backgroundColor = 'blue'
+});
+
+
+var button = document.getElementById('change-background-moent')
+button.addEventListener('mouseout',function(){
+document.body.style.backgroundColor = 'orange'
+});
+
+var button = document.getElementById('change-background-moout');
+button.addEventListener('mouseenter',function(){
+document.body.style.backgroundColor = "yellow"
+});
